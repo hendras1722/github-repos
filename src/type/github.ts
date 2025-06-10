@@ -109,20 +109,12 @@ export interface Repos {
   allow_forking:               boolean;
   is_template:                 boolean;
   web_commit_signoff_required: boolean;
-  topics:                      any[];
   visibility:                  Visibility;
   forks:                       number;
   open_issues:                 number;
   watchers:                    number;
-  default_branch:              DefaultBranch;
 }
 
-export enum DefaultBranch {
-  Devel = "devel",
-  Develop = "develop",
-  Main = "main",
-  Master = "master",
-}
 
 export interface License {
   key:     string;
@@ -133,55 +125,26 @@ export interface License {
 }
 
 export interface Owner {
-  login:               Login;
   id:                  number;
-  node_id:             NodeID;
   avatar_url:          string;
   gravatar_id:         string;
   url:                 string;
   html_url:            string;
   followers_url:       string;
-  following_url:       FollowingURL;
-  gists_url:           GistsURL;
   starred_url:         StarredURL;
   subscriptions_url:   string;
   organizations_url:   string;
   repos_url:           string;
-  events_url:          EventsURL;
   received_events_url: string;
   type:                Type;
   user_view_type:      Visibility;
   site_admin:          boolean;
 }
 
-export enum EventsURL {
-  HTTPSAPIGithubCOMUsersAlexEventsPrivacy = "https://api.github.com/users/alex/events{/privacy}",
+
+export interface StarredURL {
+  HTTPSAPIGithubCOMUsersAlexStarredOwnerRepo : string
 }
 
-export enum FollowingURL {
-  HTTPSAPIGithubCOMUsersAlexFollowingOtherUser = "https://api.github.com/users/alex/following{/other_user}",
-}
 
-export enum GistsURL {
-  HTTPSAPIGithubCOMUsersAlexGistsGistID = "https://api.github.com/users/alex/gists{/gist_id}",
-}
-
-export enum Login {
-  Alex = "alex",
-}
-
-export enum NodeID {
-  MDQ6VXNlcjc3Mg = "MDQ6VXNlcjc3Mg==",
-}
-
-export enum StarredURL {
-  HTTPSAPIGithubCOMUsersAlexStarredOwnerRepo = "https://api.github.com/users/alex/starred{/owner}{/repo}",
-}
-
-export enum Type {
-  User = "User",
-}
-
-export enum Visibility {
-  Public = "public",
-}
+export type Visibility = "public";

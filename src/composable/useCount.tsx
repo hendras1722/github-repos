@@ -9,7 +9,7 @@ export const useCountUp = (end: number, duration = 2000, start = 0) => {
     setIsAnimating(true)
     const startTime = performance.now()
 
-    const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4)
+    const easeOutQuart = (t: number) => 1 - Math.pow(1 - t, 4)
 
     const animate = (currentTime: number) => {
       const elapsed = currentTime - startTime
