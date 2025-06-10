@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://hendras1722.github.io/github-repos",
+  "homepage": "https://hendras1722.github.io/github-repos",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
