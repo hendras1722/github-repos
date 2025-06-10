@@ -4,8 +4,8 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/github-repos/',
   plugins: [react(), tsconfigPaths()],
+  base: '/',
   server: {
     proxy: {
       '/api': {
