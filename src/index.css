@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes bounce-scale {
+  from {
+      transform: scale(2);
+  }
+  to {
+      transform: scale(1);
+  }
+}
+
+.animate-bounce-scale {
+  animation: bounce-scale 1s alternate infinite;
+}
+
+.animate-bounce-scale-delay-1 {
+  animation: bounce-scale 1s alternate infinite;
+  animation-delay: 0.25s;
+}
+
+.animate-bounce-scale-delay-2 {
+  animation: bounce-scale 1s alternate infinite;
+  animation-delay: 0.5s;
+}
