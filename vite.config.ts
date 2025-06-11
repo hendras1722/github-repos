@@ -6,15 +6,4 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   base: '/github-repos/',
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://api.github.com',
-        changeOrigin: true,
-        rewrite: (path) => {
-          return path.replace(/^\/api/, '')
-        },
-      },
-    },
-  },
 })

@@ -5,13 +5,11 @@ import Layout from './Layouts/default'
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-        </Route>
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/github-repos" element={<Layout />}>
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
   )
 }
 
