@@ -85,6 +85,7 @@ export default function Home() {
   return (
     <>
       <Input
+        data-testid="search-input"
         className="border border-slate-300 rounded-md p-3"
         placeholder="Search user github"
         variant="outline"
